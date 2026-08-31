@@ -130,6 +130,23 @@ document.querySelectorAll('[data-reveal]').forEach(el => {
   observer.observe(el);
 });
 
+// safety net: never let content stay permanently hidden if the observer
+// misses an element for any reason (fast scroll-snap jumps, edge cases, etc.)
+function revealAnyOnscreen() {
+  document.querySelectorAll('[data-reveal]:not(.is-visible)').forEach(el => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight && rect.bottom > 0) {
+      el.classList.add('is-visible');
+    }
+  });
+}
+window.addEventListener('scroll', () => requestAnimationFrame(revealAnyOnscreen), { passive: true });
+setTimeout(revealAnyOnscreen, 1200);
+setTimeout(() => {
+  // final hard guarantee: after 6s, reveal everything outright regardless of position
+  document.querySelectorAll('[data-reveal]:not(.is-visible)').forEach(el => el.classList.add('is-visible'));
+}, 6000);
+
 /* ---------- animated counters ---------- */
 function initCounters() {
   const stats = document.querySelectorAll('.hero-stats strong');
@@ -203,15 +220,52 @@ function initHeroParallax() {
     const rect = hero.getBoundingClientRect();
     const px = (e.clientX - rect.left) / rect.width - 0.5;
     const py = (e.clientY - rect.top) / rect.height - 0.5;
-    glow1.style.transform = `translate(${px * -40}px, ${py * -40}px)`;
-    glow2.style.transform = `translate(${px * 40}px, ${py * 40}px)`;
+    glow1.style.setProperty('--px', px * -40 + 'px');
+    glow1.style.setProperty('--py', py * -40 + 'px');
+    glow2.style.setProperty('--px', px * 40 + 'px');
+    glow2.style.setProperty('--py', py * 40 + 'px');
   });
   hero.addEventListener('mouseleave', () => {
-    glow1.style.transform = '';
-    glow2.style.transform = '';
+    [glow1, glow2].forEach(el => { el.style.removeProperty('--px'); el.style.removeProperty('--py'); });
   });
 }
 initHeroParallax();
+
+/* ---------- spotlight cursor glow ---------- */
+function initSpotlight() {
+  if (!supportsHover || prefersReducedMotion) return;
+  document.querySelectorAll('.spotlight').forEach(el => {
+    el.addEventListener('mousemove', (e) => {
+      const rect = el.getBoundingClientRect();
+      el.style.setProperty('--mx', ((e.clientX - rect.left) / rect.width) * 100 + '%');
+      el.style.setProperty('--my', ((e.clientY - rect.top) / rect.height) * 100 + '%');
+    });
+  });
+}
+initSpotlight();
+
+/* ---------- ambient orb parallax (about, skills, contact) ---------- */
+function initOrbParallax() {
+  if (!supportsHover || prefersReducedMotion) return;
+  document.querySelectorAll('.about, .skills, .stack').forEach(section => {
+    const orbs = section.querySelectorAll('.stack-orb');
+    if (!orbs.length) return;
+    section.addEventListener('mousemove', (e) => {
+      const rect = section.getBoundingClientRect();
+      const px = (e.clientX - rect.left) / rect.width - 0.5;
+      const py = (e.clientY - rect.top) / rect.height - 0.5;
+      orbs.forEach((orb, i) => {
+        const strength = 22 + i * 10;
+        orb.style.setProperty('--px', px * strength + 'px');
+        orb.style.setProperty('--py', py * strength + 'px');
+      });
+    });
+    section.addEventListener('mouseleave', () => {
+      orbs.forEach(orb => { orb.style.removeProperty('--px'); orb.style.removeProperty('--py'); });
+    });
+  });
+}
+initOrbParallax();
 
 /* ---------- cursor glow ---------- */
 function initCursorGlow() {
