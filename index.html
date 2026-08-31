@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terence Tagayona — Software Engineer</title>
+<meta name="description" content="Terence Tagayona is a full-stack software engineer who builds production web applications and speaks fluent client. See the QC-SSDD case study and get in touch.">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Terence Tagayona — Software Engineer">
+<meta property="og:description" content="Full-stack engineer with a decade of enterprise client experience. See the QC-SSDD Service Tracker case study.">
+
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="loader" id="pageLoader" aria-hidden="true">
+  <div class="loader-bars"><span></span><span></span><span></span><span></span><span></span></div>
+</div>
+
+<div class="progress-bar" id="progressBar"></div>
+
+<nav class="dots-nav" id="dotsNav" aria-label="Section navigation">
+  <button data-goto="#top" class="dot-btn" aria-label="Home"><span></span><em>Home</em></button>
+  <button data-goto="#about" class="dot-btn" aria-label="About"><span></span><em>About</em></button>
+  <button data-goto="#stack" class="dot-btn" aria-label="Stack"><span></span><em>Stack</em></button>
+  <button data-goto="#work" class="dot-btn" aria-label="Work"><span></span><em>Work</em></button>
+  <button data-goto="#skills" class="dot-btn" aria-label="Skills"><span></span><em>Skills</em></button>
+  <button data-goto="#experience" class="dot-btn" aria-label="Experience"><span></span><em>Experience</em></button>
+  <button data-goto="#contact" class="dot-btn" aria-label="Contact"><span></span><em>Contact</em></button>
+</nav>
+
+<header class="site-header" id="siteHeader">
+  <div class="wrap header-inner">
+    <a class="brand" href="#top">TT<span class="brand-dot">.</span></a>
+    <nav class="nav" id="nav">
+      <span class="nav-indicator" id="navIndicator" aria-hidden="true"></span>
+      <a href="#work" data-nav>Work</a>
+      <a href="#skills" data-nav>Skills</a>
+      <a href="#experience" data-nav>Experience</a>
+      <a href="#contact" class="nav-cta magnetic" data-nav>Let's talk</a>
+    </nav>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark theme">
+      <svg class="icon-sun" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.6"/><g stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M12 2.5v2.4M12 19.1v2.4M4.2 4.2l1.7 1.7M18.1 18.1l1.7 1.7M2.5 12h2.4M19.1 12h2.4M4.2 19.8l1.7-1.7M18.1 5.9l1.7-1.7"/></g></svg>
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="none"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.8 6.8 0 0 0 10.5 10.5Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+    </button>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="snapMain">
+
+  <!-- HERO -->
+  <section class="snap-section hero" id="top">
+    <div class="hero-bg" aria-hidden="true">
+      <div class="hero-glow hero-glow-1"></div>
+      <div class="hero-glow hero-glow-2"></div>
+      <div class="hero-noise"></div>
+    </div>
+    <div class="marquee-ghost" aria-hidden="true">
+      <div class="marquee-track">
+        <span>FULL&#8209;STACK&nbsp;ENGINEER&nbsp;·&nbsp;</span><span>FULL&#8209;STACK&nbsp;ENGINEER&nbsp;·&nbsp;</span><span>FULL&#8209;STACK&nbsp;ENGINEER&nbsp;·&nbsp;</span><span>FULL&#8209;STACK&nbsp;ENGINEER&nbsp;·&nbsp;</span>
+      </div>
+    </div>
+    <div class="wrap hero-inner section-inner">
+      <div class="hero-copy" data-reveal>
+        <p class="eyebrow"><span class="eyebrow-dot"></span>Open to new projects · Pasig City, PH</p>
+        <h1>I build products clients <span class="text-gradient">trust</span> — earned over a decade, before I wrote a line of code.</h1>
+        <p class="hero-sub">
+          I ship full-stack web applications end to end, and I bring 10+ years of enterprise account
+          management (Dell, Amtec Global) to every engagement — translating business needs into working
+          software, not just tickets into code.
+        </p>
+        <div class="hero-actions">
+          <a href="#work" class="btn btn-primary magnetic"><span>See the work</span></a>
+          <a href="#contact" class="btn btn-ghost magnetic"><span>Let's talk</span></a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat"><strong data-count="2" data-suffix="+">0</strong><span>yrs shipping production code</span></div>
+          <div class="stat"><strong data-count="10" data-suffix="+">0</strong><span>yrs enterprise client management</span></div>
+          <div class="stat"><strong data-count="1" data-suffix="">0</strong><span>gov-scale system in production</span></div>
+        </div>
+      </div>
+      <div class="hero-visual" data-reveal>
+        <div class="avatar-orbit">
+          <span class="orbit-ring"></span>
+          <span class="orbit-ring orbit-ring-2"></span>
+          <div class="avatar-frame tilt" data-tilt-max="8">
+            <div class="avatar-placeholder" id="avatarPlaceholder"><span>TT</span></div>
+            <img src="assets/headshot.png" alt="Terence Tagayona" class="avatar-photo" id="avatarPhoto">
+          </div>
+          <div class="orbit-item" style="--duration:16s; --delay:0s;"><span class="orbit-chip">React</span></div>
+          <div class="orbit-item" style="--duration:20s; --delay:-4s;"><span class="orbit-chip">Node.js</span></div>
+          <div class="orbit-item" style="--duration:24s; --delay:-9s;"><span class="orbit-chip">AWS</span></div>
+          <div class="orbit-item" style="--duration:18s; --delay:-13s;"><span class="orbit-chip">Python</span></div>
+          <div class="orbit-item" style="--duration:22s; --delay:-17s;"><span class="orbit-chip">PHP</span></div>
+        </div>
+      </div>
+    </div>
+    <a href="#about" class="scroll-cue" aria-label="Scroll to content"><span></span></a>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="snap-section about" id="about">
+    <div class="wrap about-inner section-inner">
+      <div class="about-copy" data-reveal>
+        <p class="section-label">Why hire a former account manager to write your code</p>
+        <p class="lead">
+          For over a decade I managed enterprise accounts at Dell and led business development at Amtec Global —
+          gathering requirements, managing expectations, and closing deals under deadline pressure. In 2024 I moved
+          into full-stack engineering, and that background didn't disappear. It shows up in how I ask the right
+          questions before writing code, communicate clearly when scope shifts, and treat a client's deadline
+          like a quota I have to hit.
+        </p>
+        <p class="lead">
+          Today I build with React, Node.js, and modern cloud tooling — most recently as part of the engineering
+          team behind a production benefits-management platform used by a city government department.
+        </p>
+      </div>
+      <div class="about-card" data-reveal>
+        <div class="about-fact">
+          <span class="about-fact-label">Currently</span>
+          <span class="about-fact-value">Software Engineer @ Sparksoft Solutions</span>
+        </div>
+        <div class="about-fact">
+          <span class="about-fact-label">Focus</span>
+          <span class="about-fact-value">Full-stack web apps, client-facing delivery</span>
+        </div>
+        <div class="about-fact">
+          <span class="about-fact-label">Background</span>
+          <span class="about-fact-value">10+ yrs enterprise accounts — Dell, Amtec Global</span>
+        </div>
+        <div class="about-fact">
+          <span class="about-fact-label">Based in</span>
+          <span class="about-fact-value">Pasig City, Philippines</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TECH STACK -->
+  <section class="snap-section stack" id="stack">
+    <div class="stack-bg" aria-hidden="true">
+      <span class="stack-orb orb-1"></span>
+      <span class="stack-orb orb-2"></span>
+      <span class="stack-orb orb-3"></span>
+    </div>
+    <div class="wrap section-inner stack-inner">
+      <p class="section-label" data-reveal>Toolbox</p>
+      <h2 class="section-title" data-reveal>What I build with</h2>
+      <div class="stack-marquee" data-reveal>
+        <div class="stack-row row-left">
+          <div class="stack-row-track">
+            <span class="stack-tile">React</span><span class="stack-tile">Next.js</span><span class="stack-tile">TypeScript</span><span class="stack-tile">Node.js</span><span class="stack-tile">Express</span><span class="stack-tile">PHP</span><span class="stack-tile">Laravel</span><span class="stack-tile">Python</span><span class="stack-tile">MySQL</span>
+            <span class="stack-tile" aria-hidden="true">React</span><span class="stack-tile" aria-hidden="true">Next.js</span><span class="stack-tile" aria-hidden="true">TypeScript</span><span class="stack-tile" aria-hidden="true">Node.js</span><span class="stack-tile" aria-hidden="true">Express</span><span class="stack-tile" aria-hidden="true">PHP</span><span class="stack-tile" aria-hidden="true">Laravel</span><span class="stack-tile" aria-hidden="true">Python</span><span class="stack-tile" aria-hidden="true">MySQL</span>
+          </div>
+        </div>
+        <div class="stack-row row-right">
+          <div class="stack-row-track">
+            <span class="stack-tile">PostgreSQL</span><span class="stack-tile">MongoDB</span><span class="stack-tile">AWS S3</span><span class="stack-tile">BigQuery</span><span class="stack-tile">Docker</span><span class="stack-tile">Tailwind CSS</span><span class="stack-tile">Socket.io</span><span class="stack-tile">JWT</span><span class="stack-tile">Git</span>
+            <span class="stack-tile" aria-hidden="true">PostgreSQL</span><span class="stack-tile" aria-hidden="true">MongoDB</span><span class="stack-tile" aria-hidden="true">AWS S3</span><span class="stack-tile" aria-hidden="true">BigQuery</span><span class="stack-tile" aria-hidden="true">Docker</span><span class="stack-tile" aria-hidden="true">Tailwind CSS</span><span class="stack-tile" aria-hidden="true">Socket.io</span><span class="stack-tile" aria-hidden="true">JWT</span><span class="stack-tile" aria-hidden="true">Git</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORK CAROUSEL -->
+  <section class="snap-section work-section" id="work">
+    <div class="wrap section-inner work-inner">
+      <div class="work-head" data-reveal>
+        <p class="section-label">Featured Work</p>
+        <h2 class="section-title">Things I've shipped</h2>
+      </div>
+
+      <div class="carousel" id="workCarousel" data-index="0">
+        <button class="carousel-arrow prev" id="carouselPrev" aria-label="Previous project">&#8249;</button>
+        <button class="carousel-arrow next" id="carouselNext" aria-label="Next project">&#8250;</button>
+
+        <div class="carousel-track">
+
+          <article class="carousel-slide is-active" data-slide="0">
+            <div class="project-visual">
+              <div class="browser-mock tilt" data-tilt-max="5">
+                <div class="browser-bar">
+                  <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
+                  <span class="browser-url">qc-ssdd.sparksoft-apps.com</span>
+                </div>
+                <div class="browser-body" id="screenshotBody">
+                  <div class="shot-wrap" id="shotWrap">
+                    <img src="assets/qcssdd-dashboard.png" alt="QC-SSDD Service Tracker transaction dashboard, client data redacted" id="screenshotImg">
+                    <span class="redact-bar" style="left:27%; top:70%; width:8%; height:30%" title="Client QC ID — redacted"></span>
+                    <span class="redact-bar" style="left:35%; top:70%; width:8.5%; height:30%" title="Client name — redacted"></span>
+                    <span class="redact-bar" style="left:43.5%; top:70%; width:7%; height:30%" title="Barangay — redacted"></span>
+                    <span class="redact-bar" style="left:56.5%; top:70%; width:11%; height:30%" title="Informant name — redacted"></span>
+                  </div>
+                </div>
+              </div>
+              <p class="case-caption">Client identifiers redacted for beneficiary privacy.</p>
+            </div>
+            <div class="project-copy">
+              <span class="project-index">01 / 03</span>
+              <h3>QC-SSDD Service Tracker</h3>
+              <p class="project-desc">A full-stack benefits-management platform built for the Quezon City Social
+                Services Development Department, delivered through Sparksoft Solutions — replacing manual,
+                paper-based tracking of social service transactions.</p>
+              <ul class="highlight-list">
+                <li>Role-based approval workflows across departments</li>
+                <li>30+ reporting endpoints synced to Google BigQuery</li>
+                <li>AWS S3 documents, JWT auth, full audit trails</li>
+              </ul>
+              <button class="details-toggle" aria-expanded="false">Show full case study <span>&#9662;</span></button>
+              <div class="case-details">
+                <div class="case-block">
+                  <h4>The problem</h4>
+                  <p>Social workers tracked benefit applications and household data manually, with no shared system
+                    for approvals, reporting, or field data collection during disaster response.</p>
+                </div>
+                <div class="case-block">
+                  <h4>What we built</h4>
+                  <ul class="case-list">
+                    <li>Role-based transaction lifecycle management with multi-level approval workflows</li>
+                    <li>Household and informant registry with deduplication and audit history</li>
+                    <li>Mobile field-data intake via ODK integration — GPS location and e-signature capture</li>
+                    <li>Disaster-relief module tracking flood/typhoon assistance by district</li>
+                    <li>30+ reporting and analytics endpoints, synced to Google BigQuery for department-wide dashboards</li>
+                    <li>AWS S3 document storage, JWT authentication, and full audit trails</li>
+                  </ul>
+                </div>
+                <div class="case-block">
+                  <h4>My role</h4>
+                  <p>Engineer on a small Sparksoft team — built and shipped frontend features and backend fixes
+                    across the transaction, reporting, and disaster-relief modules, with rigorous test coverage
+                    as part of the team's TDD workflow.</p>
+                </div>
+              </div>
+              <div class="tech-badges">
+                <span>React</span><span>Material UI</span><span>Node.js</span><span>Express</span>
+                <span>MySQL</span><span>Sequelize</span><span>JWT</span><span>AWS S3</span>
+                <span>BigQuery</span><span>Socket.io</span>
+              </div>
+              <a href="https://qc-ssdd.sparksoft-apps.com/qcssdd-frontend/login" target="_blank" rel="noopener" class="btn btn-outline magnetic"><span>View live login →</span></a>
+            </div>
+          </article>
+
+          <article class="carousel-slide" data-slide="1">
+            <div class="project-visual">
+              <div class="shot-card tilt" data-tilt-max="5">
+                <div class="shot-wrap">
+                  <img src="assets/kabahagi.png" alt="Kabahagi Case Management System, client names redacted">
+                  <span class="redact-bar" style="left:19%; top:30%; width:9%; height:70%" title="Client name — redacted"></span>
+                </div>
+              </div>
+              <p class="case-caption">Client names redacted for casework privacy.</p>
+            </div>
+            <div class="project-copy">
+              <span class="project-index">02 / 03</span>
+              <h3>Kabahagi Case Management System</h3>
+              <p class="project-desc">A hardened case and lead management platform for social services casework,
+                deployed at Sparksoft alongside QC-SSDD — currently in active development.</p>
+              <ul class="highlight-list">
+                <li>Kanban + list views with multi-field filtering</li>
+                <li>Duplicate-client prevention across intake channels</li>
+                <li>WAF rules, A+ security headers, origin allowlisting</li>
+              </ul>
+              <button class="details-toggle" aria-expanded="false">Show full case study <span>&#9662;</span></button>
+              <div class="case-details">
+                <div class="case-block">
+                  <h4>The problem</h4>
+                  <p>Case teams needed to track leads through intake, social-worker screening, and assignment
+                    without duplicate client records or losing context between channels.</p>
+                </div>
+                <div class="case-block">
+                  <h4>What we're building</h4>
+                  <ul class="case-list">
+                    <li>Kanban and list views for case/lead tracking with advanced multi-field filtering</li>
+                    <li>Duplicate-client prevention across online intake — matches on email, QC ID, phone, and name</li>
+                    <li>Direct client email communication from a case profile, with full audit logging</li>
+                    <li>Tablet-friendly touch drag-and-drop Kanban board</li>
+                    <li>Hardened security posture: WAF rules, A+ security headers, origin allowlisting, disabled
+                      dangerous PHP functions</li>
+                  </ul>
+                </div>
+                <div class="case-block">
+                  <h4>My role</h4>
+                  <p>Engineer on the Sparksoft team, contributing case-management features and security
+                    hardening — this project is still in active development.</p>
+                </div>
+              </div>
+              <div class="tech-badges">
+                <span>PHP</span><span>CodeIgniter</span><span>MySQL</span><span>jQuery</span>
+                <span>Bootstrap</span><span>AWS SDK</span>
+              </div>
+              <a href="https://qc-ssdd.sparksoft-apps.com/kabahagi_case_management" target="_blank" rel="noopener" class="btn btn-outline magnetic"><span>View live →</span></a>
+            </div>
+          </article>
+
+          <article class="carousel-slide" data-slide="2">
+            <div class="project-visual">
+              <div class="browser-mock tilt" data-tilt-max="5">
+                <div class="browser-bar">
+                  <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
+                  <span class="browser-url">salesoffshoreph.com</span>
+                </div>
+                <div class="iframe-clip">
+                  <iframe src="https://www.salesoffshoreph.com" title="Sales Offshore live website preview" loading="lazy"></iframe>
+                </div>
+              </div>
+              <p class="case-caption">Live preview — <a href="https://www.salesoffshoreph.com" target="_blank" rel="noopener">salesoffshoreph.com</a></p>
+            </div>
+            <div class="project-copy">
+              <span class="project-index">03 / 03</span>
+              <h3>Sales Offshore — Company Website</h3>
+              <p class="project-desc">The public marketing and lead-generation site for Sales Offshore, an
+                outsourced sales-staffing agency — designed and built solo, end to end, on Hostinger.</p>
+              <ul class="highlight-list">
+                <li>Conversion-focused landing page and process timeline</li>
+                <li>Animated stats counters and testimonials</li>
+                <li>Fully responsive, shipped as a React SPA</li>
+              </ul>
+              <button class="details-toggle" aria-expanded="false">Show full case study <span>&#9662;</span></button>
+              <div class="case-details">
+                <div class="case-block">
+                  <h4>The problem</h4>
+                  <p>Sales Offshore needed a fast, credible marketing site to convert US-based businesses into
+                    booked strategy calls — explaining the offer, building trust, and driving bookings without a
+                    slow, generic template site.</p>
+                </div>
+                <div class="case-block">
+                  <h4>What I built</h4>
+                  <ul class="case-list">
+                    <li>Conversion-focused landing page: hero, service breakdown, and process timeline</li>
+                    <li>Animated stats counters and client testimonials for social proof</li>
+                    <li>Accordion-style FAQ and a dedicated booking/contact section</li>
+                    <li>Fully responsive layout, deployed and hosted on Hostinger</li>
+                  </ul>
+                </div>
+                <div class="case-block">
+                  <h4>My role</h4>
+                  <p>Sole developer — designed and built the site end to end as a React single-page application
+                    and shipped it to production.</p>
+                </div>
+              </div>
+              <div class="tech-badges">
+                <span>React</span><span>Vite</span><span>Tailwind CSS</span><span>Hostinger</span>
+              </div>
+              <a href="https://www.salesoffshoreph.com" target="_blank" rel="noopener" class="btn btn-outline magnetic"><span>Visit live site →</span></a>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="carousel-dots" id="carouselDots">
+          <div class="carousel-progress"><span class="carousel-progress-fill" id="carouselProgressFill"></span></div>
+          <div class="carousel-dots-row">
+            <button class="cdot is-active" data-goto="0" aria-label="Project 1"></button>
+            <button class="cdot" data-goto="1" aria-label="Project 2"></button>
+            <button class="cdot" data-goto="2" aria-label="Project 3"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS + CERTS -->
+  <section class="snap-section skills" id="skills">
+    <div class="wrap section-inner skills-inner">
+      <div class="skills-col">
+        <p class="section-label" data-reveal>Capabilities</p>
+        <h2 class="section-title" data-reveal>What I bring to a project</h2>
+        <div class="skills-grid">
+          <div class="skill-card tilt" data-tilt-max="6" data-reveal>
+            <span class="skill-glyph">&lt;/&gt;</span>
+            <h3>Frontend</h3>
+            <p>React, Next.js, TypeScript, Tailwind CSS, Material UI</p>
+          </div>
+          <div class="skill-card tilt" data-tilt-max="6" data-reveal>
+            <span class="skill-glyph">{ }</span>
+            <h3>Backend</h3>
+            <p>Node.js, Express, PHP, Laravel, Python, REST &amp; GraphQL, MySQL, MongoDB</p>
+          </div>
+          <div class="skill-card tilt" data-tilt-max="6" data-reveal>
+            <span class="skill-glyph">&#9729;</span>
+            <h3>Cloud &amp; Tools</h3>
+            <p>AWS S3, BigQuery, Docker, Git, CI/CD, Postman</p>
+          </div>
+          <div class="skill-card skill-card-highlight tilt" data-tilt-max="6" data-reveal>
+            <span class="skill-glyph">&#9670;</span>
+            <h3>Client &amp; Delivery</h3>
+            <p>Requirements translation, stakeholder communication, deadline ownership.</p>
+          </div>
+        </div>
+      </div>
+      <div class="certs-col">
+        <p class="section-label" data-reveal>Continuous Learning</p>
+        <h2 class="section-title" data-reveal>Certifications</h2>
+        <div class="certs-list">
+          <div class="cert-row tilt" data-tilt-max="3" data-reveal>
+            <span class="cert-issuer">IBM · Coursera</span>
+            <h3>Intro to Web Development — HTML, CSS, JavaScript</h3>
+            <span class="cert-date">Feb 2024</span>
+            <a href="https://coursera.org/verify/M8FLX4TFCGV6" target="_blank" rel="noopener">Verify →</a>
+          </div>
+          <div class="cert-row tilt" data-tilt-max="3" data-reveal>
+            <span class="cert-issuer">KodeGo</span>
+            <h3>Full Stack Web Development — 12-week program</h3>
+            <span class="cert-date">Apr 2024</span>
+          </div>
+          <div class="cert-row tilt" data-tilt-max="3" data-reveal>
+            <span class="cert-issuer">Udemy</span>
+            <h3>The Complete 2024 Web Development Bootcamp</h3>
+            <span class="cert-date">Jun 2024 · 61.5 hrs</span>
+            <a href="https://ude.my/UC-7614f6a8-e7f4-4160-9ec7-ed585ffac743" target="_blank" rel="noopener">Verify →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="snap-section experience" id="experience">
+    <div class="wrap section-inner">
+      <p class="section-label" data-reveal>Experience</p>
+      <h2 class="section-title" data-reveal>Track record</h2>
+
+      <div class="h-timeline" id="timeline">
+        <div class="h-timeline-track" aria-hidden="true">
+          <span class="h-timeline-fill" id="timelineFill"></span>
+          <span class="h-timeline-travel"></span>
+        </div>
+        <div class="h-timeline-item tilt" data-tilt-max="3" data-reveal>
+          <span class="h-timeline-dot"></span>
+          <div class="h-timeline-date">2024 — Present</div>
+          <div class="h-timeline-content">
+            <h3>Software Engineer / Web Developer</h3>
+            <span class="h-timeline-org">Sparksoft Solutions</span>
+            <ul>
+              <li>Built and deployed responsive full-stack features for the QC-SSDD Service Tracker platform</li>
+              <li>Designed and integrated RESTful APIs and cloud services for real-time data sync</li>
+              <li>Collaborated with a remote engineering team via Git workflows and CI/CD</li>
+            </ul>
+          </div>
+        </div>
+        <div class="h-timeline-item tilt" data-tilt-max="3" data-reveal>
+          <span class="h-timeline-dot"></span>
+          <div class="h-timeline-date">2011 — 2024</div>
+          <div class="h-timeline-content">
+            <h3>Sales Account Manager / Business Development</h3>
+            <span class="h-timeline-org">Dell, Amtec Global, Alorica, VXI</span>
+            <ul>
+              <li>Managed enterprise account relationships and renewals for global clients, including Dell</li>
+              <li>Translated complex client requirements into actionable plans under deadline pressure</li>
+              <li>Led B2B lead generation and closed high-value deals across US markets</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="snap-section contact" id="contact">
+    <div class="stack-bg" aria-hidden="true">
+      <span class="stack-orb orb-1"></span>
+      <span class="stack-orb orb-2"></span>
+    </div>
+    <div class="wrap contact-inner section-inner" data-reveal>
+      <div class="contact-copy">
+        <p class="section-label">Get in touch</p>
+        <h2 class="section-title">Have a project<br>in mind?</h2>
+        <p class="lead">I read every message myself — tell me what you're building and I'll reply within a day.</p>
+        <div class="contact-actions">
+          <a href="mailto:terence.tagayona@gmail.com?subject=Let%27s%20work%20together&body=Hi%20Terence%2C%0A%0AI%20came%20across%20your%20portfolio%20and%20wanted%20to%20talk%20about..." class="btn btn-primary btn-lg magnetic"><span>Email me</span></a>
+          <a href="assets/resume.pdf" class="btn btn-ghost btn-lg magnetic" download><span>Download résumé</span></a>
+        </div>
+        <div class="contact-details">
+          <a href="mailto:terence.tagayona@gmail.com">terence.tagayona@gmail.com</a>
+          <span>+63 969 202 8121</span>
+          <span>Pasig City, Philippines</span>
+        </div>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/tere-t/" target="_blank" rel="noopener">LinkedIn ↗</a>
+          <a href="https://github.com/Terence1925" target="_blank" rel="noopener">GitHub ↗</a>
+        </div>
+      </div>
+      <div class="contact-visual" aria-hidden="true">
+        <svg id="signalSvg" viewBox="0 0 360 360" fill="none">
+          <circle cx="180" cy="180" r="150" stroke="url(#gradRing)" stroke-width="1" stroke-dasharray="6 10" class="svg-ring"/>
+          <path id="signalPath" d="M40 220 C 90 140, 130 260, 180 180 S 270 60, 320 140" stroke="url(#gradLine)" stroke-width="2.5" stroke-linecap="round"/>
+          <circle cx="40" cy="220" r="5" fill="#22d3ee" class="svg-node" style="--nd:0"/>
+          <circle cx="180" cy="180" r="5" fill="#8b5cf6" class="svg-node" style="--nd:1"/>
+          <circle cx="320" cy="140" r="5" fill="#22d3ee" class="svg-node" style="--nd:2"/>
+          <circle r="4" fill="#fff" class="svg-travel">
+            <animateMotion dur="4s" repeatCount="indefinite" path="M40 220 C 90 140, 130 260, 180 180 S 270 60, 320 140"/>
+          </circle>
+          <defs>
+            <linearGradient id="gradLine" x1="0" y1="0" x2="360" y2="0">
+              <stop offset="0" stop-color="#8b5cf6"/><stop offset="1" stop-color="#22d3ee"/>
+            </linearGradient>
+            <linearGradient id="gradRing" x1="0" y1="0" x2="360" y2="360">
+              <stop offset="0" stop-color="#8b5cf6"/><stop offset="1" stop-color="#22d3ee"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+      <div class="contact-footer">
+        <span>© <span id="year"></span> Terence Tagayona</span>
+        <div class="footer-links">
+          <a href="https://www.linkedin.com/in/tere-t/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://github.com/Terence1925" target="_blank" rel="noopener">GitHub</a>
+          <a href="#top">Back to top ↑</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
